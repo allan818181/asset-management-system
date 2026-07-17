@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Django Migrations Evidence - Asset Management System</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Roboto, monospace; background:#0d1117; color:#c9d1d9; padding:24px; }
+  h1 { color:#58a6ff; }
+  h2 { color:#7ee787; border-bottom:1px solid #30363d; padding-bottom:6px; margin-top:32px; }
+  pre { background:#161b22; border:1px solid #30363d; border-radius:6px; padding:14px; overflow:auto; font-size:13px; line-height:1.5; }
+  .ok { color:#7ee787; }
+  .dim { color:#8b949e; }
+  table { border-collapse:collapse; width:100%; margin-top:10px; }
+  th, td { border:1px solid #30363d; padding:8px 10px; text-align:left; font-size:13px; }
+  th { background:#161b22; color:#58a6ff; }
+  .badge { background:#238636; color:#fff; padding:2px 8px; border-radius:10px; font-size:12px; }
+</style>
+</head>
+<body>
+<h1>Django Asset Management - Migration Evidence</h1>
+<p class="dim">Generated: 2026-07-16 · Django 6.0.6 · Engine: sqlite3 (db.sqlite3)</p>
+
+<h2>1. makemigrations --check --dry-run</h2>
+<pre><span class="ok">No changes detected</span>   (exit 0)
+
+All models are already reflected in migrations;
+nothing new to generate.</pre>
+
+<h2>2. showmigrations myasets</h2>
+<pre>myasets
+ [X] 0001_initial      <span class="badge">applied</span></pre>
+
+<h2>3. migrate --plan myasets</h2>
+<pre>Planned operations:
+  No planned migration operations.</pre>
+
+<h2>4. Migration files generated</h2>
+<pre>myasets/migrations/
+ ├── __init__.py          (0 bytes - package marker)
+ ├── 0001_initial.py      (7.7 KB - the migration that builds the schema)
+ └── __pycache__/</pre>
+
+<h2>5. Tables actually created in db.sqlite3</h2>
+<table>
+  <tr><th>#</th><th>Table name</th><th>Source</th><th>Rows</th></tr>
+  <tr><td>1</td><td>myasets_department</td><td>myasets</td><td>0</td></tr>
+  <tr><td>2</td><td>myasets_employee</td><td>myasets</td><td>0</td></tr>
+  <tr><td>3</td><td>myasets_supplier</td><td>myasets</td><td>0</td></tr>
+  <tr><td>4</td><td>myasets_location</td><td>myasets</td><td>0</td></tr>
+  <tr><td>5</td><td>myasets_asset</td><td>myasets</td><td>0</td></tr>
+  <tr><td>6</td><td>myasets_assetassignment</td><td>myasets</td><td>0</td></tr>
+  <tr><td>7</td><td>myasets_maintenance</td><td>myasets</td><td>0</td></tr>
+  <tr><td>8</td><td>myasets_disposal</td><td>myasets</td><td>0</td></tr>
+  <tr class="dim"><td>-</td><td>auth_* / django_*</td><td>built-in apps</td><td>-</td></tr>
+</table>
+
+<h2>6. Applied migration record (django_migrations)</h2>
+<pre>app='myasets'  name='0001_initial'  applied='2026-07-16 19:32:51'</pre>
+
+<h2>7. Result summary</h2>
+<pre><span class="ok">migrate: OK</span>  - all migrations applied, 8 myasets tables now exist in the database.</pre>
+</body>
+</html>
